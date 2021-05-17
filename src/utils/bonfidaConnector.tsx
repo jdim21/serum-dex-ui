@@ -1,8 +1,6 @@
 import { BonfidaTrade } from './types';
 
 export default class BonfidaApi {
-  // static URL: string = 'https://serum-api.bonfida.com/';
-  // static URL: string = 'http://sdoge-tvapi-dev.us-east-2.elasticbeanstalk.com/';
   // static URL: string = 'http://localhost:5000/';
   static URL: string = 'http://api.soltoolstv.net/';
 
