@@ -2,7 +2,7 @@ import { BonfidaTrade } from './types';
 
 export default class BonfidaApi {
   // static URL: string = 'http://localhost:5000/';
-  static URL: string = 'http://api.soltoolstv.net/';
+  static URL: string = 'http://soltoolstv.net/';
 
   static async get(path: string) {
     try {
@@ -25,4 +25,4 @@ export default class BonfidaApi {
 }
 
 // export const BONFIDA_DATA_FEED = 'http://localhost:5000/tv';
-export const BONFIDA_DATA_FEED = 'https://api.soltoolstv.net/tv';
+export const BONFIDA_DATA_FEED = 'https://soltoolstv.net/tv';
