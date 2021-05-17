@@ -1,7 +1,9 @@
 import { BonfidaTrade } from './types';
 
 export default class BonfidaApi {
-  static URL: string = 'https://serum-api.bonfida.com/';
+  // static URL: string = 'https://serum-api.bonfida.com/';
+  // static URL: string = 'http://sdoge-tvapi-dev.us-east-2.elasticbeanstalk.com/';
+  static URL: string = 'http://localhost:5000/';
 
   static async get(path: string) {
     try {
@@ -23,4 +25,6 @@ export default class BonfidaApi {
   }
 }
 
-export const BONFIDA_DATA_FEED = 'https://serum-api.bonfida.com/tv';
+// export const BONFIDA_DATA_FEED = 'https://serum-api.bonfida.com/tv';
+// export const BONFIDA_DATA_FEED = 'http://sdoge-tvapi-dev.us-east-2.elasticbeanstalk.com/tv';
+export const BONFIDA_DATA_FEED = 'http://localhost:5000/tv';

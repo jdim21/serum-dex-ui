@@ -25,6 +25,7 @@ import CustomMarketDialog from '../components/CustomMarketDialog';
 import { notify } from '../utils/notifications';
 import { useHistory, useParams } from 'react-router-dom';
 import { nanoid } from 'nanoid';
+import { TVChartContainer } from '../components/TradingView';
 
 const { Option, OptGroup } = Select;
 
@@ -78,7 +79,7 @@ function TradePageInner() {
   });
 
   useEffect(() => {
-    document.title = marketName ? `${marketName} — Serum` : 'Serum';
+    document.title = marketName ? `${marketName} — SolDoge` : 'SolDoge';
   }, [marketName]);
 
   const changeOrderRef = useRef<
@@ -154,38 +155,6 @@ function TradePageInner() {
         onAddCustomMarket={onAddCustomMarket}
       />
       <Wrapper>
-        <Row
-          align="middle"
-          style={{ paddingLeft: 5, paddingRight: 5 }}
-          gutter={16}
-        >
-          <Col>
-            <MarketSelector
-              markets={markets}
-              setHandleDeprecated={setHandleDeprecated}
-              placeholder={'Select market'}
-              customMarkets={customMarkets}
-              onDeleteCustomMarket={onDeleteCustomMarket}
-            />
-          </Col>
-          {market ? (
-            <Col>
-              <Popover
-                content={<LinkAddress address={market.publicKey.toBase58()} />}
-                placement="bottomRight"
-                title="Market address"
-                trigger="click"
-              >
-                <InfoCircleOutlined style={{ color: '#2abdd2' }} />
-              </Popover>
-            </Col>
-          ) : null}
-          <Col>
-            <PlusCircleOutlined
-              style={{ color: '#2abdd2' }}
-              onClick={() => setAddMarketVisible(true)}
-            />
-          </Col>
           {deprecatedMarkets && deprecatedMarkets.length > 0 && (
             <React.Fragment>
               <Col>
@@ -201,7 +170,6 @@ function TradePageInner() {
               </Col>
             </React.Fragment>
           )}
-        </Row>
         {component}
       </Wrapper>
     </>
@@ -335,19 +303,10 @@ const RenderNormal = ({ onChangeOrderRef, onPrice, onSize }) => {
         flexWrap: 'nowrap',
       }}
     >
-      <Col flex="auto" style={{ height: '100%', display: 'flex' }}>
-        <UserInfoTable />
-      </Col>
-      <Col flex={'360px'} style={{ height: '100%' }}>
-        <Orderbook smallScreen={false} onPrice={onPrice} onSize={onSize} />
-        <TradesTable smallScreen={false} />
-      </Col>
-      <Col
-        flex="400px"
-        style={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-      >
-        <TradeForm setChangeOrderRef={onChangeOrderRef} />
-        <StandaloneBalancesDisplay />
+      <Col flex="auto" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <Row style={{height:'800px', width:'80%', margin: '1rem'}}>
+          <TVChartContainer />
+        </Row>
       </Col>
     </Row>
   );

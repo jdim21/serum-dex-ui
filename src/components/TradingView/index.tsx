@@ -93,6 +93,7 @@ export const TVChartContainer = () => {
         button.innerHTML = 'Check API';
       });
     });
+    // eslint-disable-next-line
   }, [market]);
 
   return <div id={defaultProps.containerId} className="tradingview-chart" />;
