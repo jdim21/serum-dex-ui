@@ -50,9 +50,7 @@ export const TVChartContainer = () => {
 
   React.useEffect(() => {
     const widgetOptions: ChartingLibraryWidgetOptions = {
-      symbol: findTVMarketFromAddress(
-        market?.address.toBase58() || '',
-      ) as string,
+      symbol: market || '',
       // BEWARE: no trailing slash is expected in feed URL
       // tslint:disable-next-line:no-any
       datafeed: new (window as any).Datafeeds.UDFCompatibleDatafeed(
