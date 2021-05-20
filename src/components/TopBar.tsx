@@ -131,6 +131,8 @@ export default function TopBar() {
     ? location.pathname
     : getTradePageUrl();
 
+  const [isShown, setAboutShown] = useState(false);
+
   return (
     <>
       <CustomClusterEndpointDialog
@@ -159,66 +161,24 @@ export default function TopBar() {
           <Menu.Item key={tradePageUrl} style={{ margin: '0 10px 0 20px' }}>
             CHARTS
           </Menu.Item>
-          {connected && (!searchFocussed || location.pathname === '/balances') && (
-            <Menu.Item key="/balances" style={{ margin: '0 10px' }}>
-              BALANCES
+          {!searchFocussed && (
+            <Menu.Item key="/about" style={{ margin: '0 10px' }}>
+              <a
+                href={EXTERNAL_LINKS['/about']}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ABOUT
+              </a>
             </Menu.Item>
           )}
-          {!searchFocussed && (
-            <Menu.SubMenu
-              title="ABOUT"
+          {/* <Menu.Item key={tradePageUrl} style={{ margin: '0 10px 0 20px' }}
               onTitleClick={() =>
                 window.open(EXTERNAL_LINKS['/about'], '_blank')
               }
-              style={{ margin: '0 0px 0 10px' }}
-            >
-              <Menu.Item key="/wallet-support">
-                <a
-                  href={EXTERNAL_LINKS['/wallet-support']}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Supported wallets
-                </a>
-              </Menu.Item>
-              <Menu.Item key="/dex-list">
-                <a
-                  href={EXTERNAL_LINKS['/dex-list']}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  DEX list
-                </a>
-              </Menu.Item>
-              <Menu.Item key="/developer-resources">
-                <a
-                  href={EXTERNAL_LINKS['/developer-resources']}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Developer resources
-                </a>
-              </Menu.Item>
-              <Menu.Item key="/explorer">
-                <a
-                  href={EXTERNAL_LINKS['/explorer']}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Solana block explorer
-                </a>
-              </Menu.Item>
-              <Menu.Item key="/srm-faq">
-                <a
-                  href={EXTERNAL_LINKS['/srm-faq']}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  SRM FAQ
-                </a>
-              </Menu.Item>
-            </Menu.SubMenu>
-          )}
+          >
+            ABOUT
+          </Menu.Item> */}
         </Menu>
         <div>
           <Row

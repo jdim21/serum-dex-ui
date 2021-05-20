@@ -3,6 +3,7 @@ import TradePage from './pages/TradePage';
 import OpenOrdersPage from './pages/OpenOrdersPage';
 import React from 'react';
 import BalancesPage from './pages/BalancesPage';
+import AboutPage from './pages/AboutPage';
 import BasicLayout from './components/BasicLayout';
 import ListNewMarketPage from './pages/ListNewMarketPage';
 import NewPoolPage from './pages/pools/NewPoolPage';
@@ -21,6 +22,9 @@ export function Routes() {
             </Route>
             <Route exact path="/market/:marketAddress">
               <TradePage />
+            </Route>
+            <Route exact path="/about">
+              <AboutPage />
             </Route>
           </Switch>
         </BasicLayout>
