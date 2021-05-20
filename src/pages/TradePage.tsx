@@ -164,7 +164,7 @@ const RenderSmall = ({ onChangeOrderRef, onPrice, onSize }) => {
   return (
     <>
       <div style={{display: 'flex', justifyContent: 'center', paddingBottom:'2rem'}}>
-        <img src={ad} width="60%" height="90px"/>
+        <img src={ad} width="90%" height="90px"/>
       </div>
       <div style={{display: 'flex', justifyContent: 'center', paddingBottom:'2rem'}}>
         <Col flex="auto" style={{ height: '900px', width: '100%', display: 'flex' }}>
@@ -179,7 +179,7 @@ const RenderSmaller = ({ onChangeOrderRef, onPrice, onSize }) => {
   return (
     <>
       <div style={{display: 'flex', justifyContent: 'center', paddingBottom:'2rem'}}>
-        <img src={ad} width="60%" height="90px"/>
+        <img src={ad} width="90%" height="90px"/>
       </div>
       <div style={{display: 'flex', justifyContent: 'center', paddingBottom:'2rem'}}>
         <Col flex="auto" style={{ height: '900px', width: '100%', display: 'flex' }}>
