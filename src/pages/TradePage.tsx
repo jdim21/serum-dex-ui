@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Button, Col, Popover, Row, Select, Typography } from 'antd';
 import styled from 'styled-components';
+import ad from '../assets/ad.png';
 import Orderbook from '../components/Orderbook';
 import UserInfoTable from '../components/UserInfoTable';
 // import StandaloneBalancesDisplay from '../components/StandaloneBalancesDisplay';
@@ -25,6 +26,7 @@ import { notify } from '../utils/notifications';
 import { useHistory, useParams } from 'react-router-dom';
 import { nanoid } from 'nanoid';
 import { TVChartContainer } from '../components/TradingView';
+// import {StyleSheet,View} from "react-native" ;
 
 const { Option, OptGroup } = Select;
 
@@ -145,7 +147,17 @@ function TradePageInner() {
 
 const RenderNormal = ({ onChangeOrderRef, onPrice, onSize }) => {
   return (
-    <Row
+    <>
+      <div style={{display: 'flex', justifyContent: 'center', paddingBottom:'2rem'}}>
+        <img src={ad} width="60%" height="90px"/>
+      </div>
+      <div style={{display: 'flex', justifyContent: 'center', paddingBottom:'2rem'}}>
+        {/* <img src={ad} width="60%" height="90px"/> */}
+        <Row style={{height:'800px', width:'80%', margin: '1rem'}}>
+          <TVChartContainer />
+        </Row>
+      </div>
+    {/* <Row
       style={{
         minHeight: '900px',
         flexWrap: 'nowrap',
@@ -156,7 +168,8 @@ const RenderNormal = ({ onChangeOrderRef, onPrice, onSize }) => {
           <TVChartContainer />
         </Row>
       </Col>
-    </Row>
+    </Row> */}
+    </>
   );
 };
 
