@@ -142,7 +142,7 @@ export default function TopBar() {
       <Wrapper>
         <LogoWrapper onClick={() => history.push(tradePageUrl)}>
           <img src={logo} alt="" />
-          {'SOLTOOLS (alpha)'}
+          {'SolanaToolsIO  (alpha)'}
         </LogoWrapper>
         <Menu
           mode="horizontal"
@@ -166,9 +166,9 @@ export default function TopBar() {
           )}
           {!searchFocussed && (
             <Menu.SubMenu
-              title="LEARN"
+              title="ABOUT"
               onTitleClick={() =>
-                window.open(EXTERNAL_LINKS['/learn'], '_blank')
+                window.open(EXTERNAL_LINKS['/about'], '_blank')
               }
               style={{ margin: '0 0px 0 10px' }}
             >
@@ -220,20 +220,6 @@ export default function TopBar() {
             </Menu.SubMenu>
           )}
         </Menu>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            paddingRight: 5,
-          }}
-        >
-          <AppSearch
-            onFocus={() => setSearchFocussed(true)}
-            onBlur={() => setSearchFocussed(false)}
-            focussed={searchFocussed}
-            width={searchFocussed ? '350px' : '35px'}
-          />
-        </div>
         <div>
           <Row
             align="middle"
@@ -241,19 +227,13 @@ export default function TopBar() {
             gutter={16}
           >
             <Col>
-              <PlusCircleOutlined
-                style={{ color: '#2abdd2' }}
-                onClick={() => setAddEndpointVisible(true)}
-              />
-            </Col>
-            <Col>
               <Popover
                 content={endpoint}
                 placement="bottomRight"
                 title="URL"
                 trigger="hover"
               >
-                <InfoCircleOutlined style={{ color: '#2abdd2' }} />
+                <InfoCircleOutlined style={{ color: '#bc13fe' }} />
               </Popover>
             </Col>
             <Col>
