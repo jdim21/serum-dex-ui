@@ -152,23 +152,10 @@ const RenderNormal = ({ onChangeOrderRef, onPrice, onSize }) => {
         <img src={ad} width="60%" height="90px"/>
       </div>
       <div style={{display: 'flex', justifyContent: 'center', paddingBottom:'2rem'}}>
-        {/* <img src={ad} width="60%" height="90px"/> */}
         <Row style={{height:'800px', width:'80%', margin: '1rem'}}>
           <TVChartContainer />
         </Row>
       </div>
-    {/* <Row
-      style={{
-        minHeight: '900px',
-        flexWrap: 'nowrap',
-      }}
-    >
-      <Col flex="auto" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-        <Row style={{height:'800px', width:'80%', margin: '1rem'}}>
-          <TVChartContainer />
-        </Row>
-      </Col>
-    </Row> */}
     </>
   );
 };
@@ -176,15 +163,14 @@ const RenderNormal = ({ onChangeOrderRef, onPrice, onSize }) => {
 const RenderSmall = ({ onChangeOrderRef, onPrice, onSize }) => {
   return (
     <>
-      <Row
-        style={{
-          height: '900px',
-        }}
-      >
-        <Col flex="auto" style={{ height: '100%', display: 'flex' }}>
+      <div style={{display: 'flex', justifyContent: 'center', paddingBottom:'2rem'}}>
+        <img src={ad} width="60%" height="90px"/>
+      </div>
+      <div style={{display: 'flex', justifyContent: 'center', paddingBottom:'2rem'}}>
+        <Col flex="auto" style={{ height: '900px', width: '100%', display: 'flex' }}>
           <TVChartContainer />
         </Col>
-      </Row>
+      </div>
     </>
   );
 };
@@ -192,15 +178,14 @@ const RenderSmall = ({ onChangeOrderRef, onPrice, onSize }) => {
 const RenderSmaller = ({ onChangeOrderRef, onPrice, onSize }) => {
   return (
     <>
-      <Row
-        style={{
-          height: '900px',
-        }}
-      >
-        <Col flex="auto" style={{ height: '100%', display: 'flex' }}>
+      <div style={{display: 'flex', justifyContent: 'center', paddingBottom:'2rem'}}>
+        <img src={ad} width="60%" height="90px"/>
+      </div>
+      <div style={{display: 'flex', justifyContent: 'center', paddingBottom:'2rem'}}>
+        <Col flex="auto" style={{ height: '900px', width: '100%', display: 'flex' }}>
           <TVChartContainer />
         </Col>
-      </Row>
+      </div>
     </>
   );
 };
