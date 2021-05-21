@@ -12,8 +12,6 @@ const footerElements = [
 ];
 
 export const CustomFooter = () => {
-  const smallScreen = !useBreakpoint().lg;
-
   return (
     <Footer
       style={{
@@ -23,7 +21,6 @@ export const CustomFooter = () => {
       }}
     >
       <Row align="middle" gutter={[16, 4]}>
-        {!smallScreen && (
           <>
             <Col flex="auto" />
             {footerElements.map((elem, index) => {
@@ -36,7 +33,6 @@ export const CustomFooter = () => {
               );
             })}
           </>
-        )}
         <Col flex="auto">{/*  <DexProgramSelector />*/}</Col>
       </Row>
     </Footer>
