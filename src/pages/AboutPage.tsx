@@ -23,7 +23,7 @@ export default function AboutPage() {
                 <h2 style={{ color: '#bc13fe', textAlign: 'center', paddingTop: '1rem', width: '50%' }}>
                     Contact us to have your market listed! Follow us on Socials (find them across the 
                     footer bar of the site) for more info. Reach out with any suggestions or bug reports 
-                    to solanatools@protonmail.com.
+                    to solanatools@protonmail.com
                 </h2>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '4rem', width: '100%' }}>
