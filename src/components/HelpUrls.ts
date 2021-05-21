@@ -2,7 +2,7 @@ export const helpUrls = {
   customerSupport: 'https://t.me/ProjectSerum',
   customerSupportZh: 'https://t.me/ProjectSerum_Chinese',
   contactEmail: 'mailto:solanatools@protonmail.com',
-  discord: 'https://discord.gg/vThG8Gz8',
+  discord: 'https://discord.gg/nQWX6d3XSs',
   telegram: 'https://t.me/ProjectSerum',
   github: 'https://github.com/project-serum',
   projectSerum: 'https://projectserum.com/',

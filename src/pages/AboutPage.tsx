@@ -26,6 +26,16 @@ export default function AboutPage() {
                     to solanatools@protonmail.com.
                 </h2>
             </div>
+            <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '4rem', width: '100%' }}>
+                <h3 style={{ color: '#bc13fe', textAlign: 'center', paddingTop: '1rem', width: '50%' }}>
+                    Disclaimer about the STUD token: The STUD token  will be used for access to site features. 
+                    This is not an equity, voting/governance token, nor does it grant the holder any expectation 
+                    of profits. It is simply a token for a service on the site. Trade STUD at your own risk.
+                    The information here does not constitute a recommendation as to whether or not you should invest.
+                    Our team accepts no liability for any loss occasioned to any person acting or refraining from 
+                    action as a result of any material provided or published.
+                </h3>
+            </div>
         </>
     );
 }
